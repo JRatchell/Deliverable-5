@@ -5,33 +5,78 @@
 <meta name="viewport" content="width=device width, intial-scale=1.0">
 <style>
 	* {box-sizing: border-box;}
-	.header {background-color: #868686;}
+	.header {background-color: #868686; color: black; padding: 10px} */ set background color to silver */
+
 	.row::after {content:""; clear: both; display: table;}
-	.menu li {padding: 5px; margin-bottom:
+
+	[class*="col-"] {float: right; padding: 8px}
+
+	.menu li {padding: 5px; margin-bottom: 4px; background-color:#d152d1; color: black;}
+
+	.menu li:hover {background-color: #bf39bf;}
+
+	.menu ul {list-style-type: none; margin: 0; padding: 0;}
+
+	.aside {background-color: #a890ef; color: black; text-align: center; font-size: 12px; padding: 10px;}
+
+	.footer {background-color: #965996; color: black; text-align: center; font-size: 10px; padding; 12px;}
+
+	[class*="col-"] {width: 100%}
+
+	@media only screen and (min-width: 600px) 
+	{.col-s-1 {width: 8.33%;}
+  	.col-s-2 {width: 16.66%;}
+  	.col-s-3 {width: 25%;}
+  	.col-s-4 {width: 33.33%;}
+  	.col-s-5 {width: 41.66%;}
+  	.col-s-6 {width: 50%;}
+  	.col-s-7 {width: 58.33%;}
+  	.col-s-8 {width: 66.66%;}
+  	.col-s-9 {width: 75%;}
+  	.col-s-10 {width: 83.33%;}
+  	.col-s-11 {width: 91.66%;}
+  	.col-s-12 {width: 100%;}}
+
+	@media only screen and (min-width: 768px) 
+	{.col-1 {width: 8.33%;}
+ 	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+  	.col-4 {width: 33.33%;}
+  	.col-5 {width: 41.66%;}
+ 	.col-6 {width: 50%;}
+  	.col-7 {width: 58.33%;}
+  	.col-8 {width: 66.66%;}
+  	.col-9 {width: 75%;}
+  	.col-10 {width: 83.33%;}
+  	.col-11 {width: 91.66%;}
+  	.col-12 {width: 100%;}}
+*/ I definitely just copy and pasted the media bits */
 
 </style>
 </head>
 <body>
 <div class="header">
-  <h1>Chania</h1>
+  <h1>
+  <h1>Header</h1>
 </div>
 
   <div class="row">
+  <div class="col-3 col-s-3 menu">
     <ul>
-      <li>The Flight</li>
-      <li>The City</li>
-      <li>The Island</li>
-      <li>The Food</li>
+      <li>A</li>
+      <li>B</li>
+      <li>C</li>
+      <li>D</li>
     </ul>
   </div>
 
-  <div>
+  <div class="col-6 col-s-9">
     <h1>The City</h1>
     <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
   </div>
 
-  <div>
-    <div>
+  <div class="col-3 col-s-12">
+    <div class="aside">
       <h2>What?</h2>
       <p>Chania is a city on the island of Crete.</p>
       <h2>Where?</h2>
@@ -41,10 +86,10 @@
     </div>
   </div>
 </div>
-
-<div>
-  <p>Resize the browser window to see how the content respond to the resizing.</p>
-</div>
+<br>
+	<div class="footer">
+  		<p>Confia</p>
+	</div>
 
 </body>
 </html>
